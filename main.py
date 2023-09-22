@@ -1,9 +1,10 @@
-from flask import Flask, send_file
-from faker import Faker
-from setings import seting_customers, seting_tracks
 import csv
-import requests
 
+import requests
+from faker import Faker
+from flask import Flask, send_file
+
+from setings import seting_customers, seting_tracks
 
 app = Flask(__name__)
 
@@ -21,7 +22,7 @@ def main_page():
 
 @app.route('/requrements/', methods=['GET'])
 def requrements():
-    return send_file('tables_and_txt/requrements.txt', as_attachment=False)
+    return send_file('requrements.txt', as_attachment=False)
 
 
 @app.route('/users/generate/<int:generate>', methods=['GET'])

@@ -1,4 +1,5 @@
 import sqlite3
+
 from faker import Faker
 
 
@@ -63,5 +64,3 @@ def seting_tracks():
         track_con.commit()
 
 
-# setup_customers()
-# setup_tracks()
